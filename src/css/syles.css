@@ -1,0 +1,712 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+
+.btn {
+    background: #ff9800;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #e68900;
+}
+
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-hamburguer div {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .nav.active {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 100px 40px;
+}
+
+.hero-content {
+    width: 60%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.btn-cv {
+    background: #ff9800;
+}
+
+.btn-contact {
+    background: #333;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff9800;
+}
+
+.hero-image {
+    width: 40%;
+    height: 100vh;
+    background: url('background-image.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sobre {
+    padding: 80px 40px;
+    background-color: #fff;
+    color: #333;
+}
+
+.sobre h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff9800;
+}
+
+.sobre p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sobre ul {
+    list-style-type: none;
+}
+
+.sobre ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.sobre ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ff9800;
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.projetos {
+    padding: 80px 40px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.projetos h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff9800;
+    text-align: center;
+}
+
+.projetos p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projeto-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.projeto-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px);
+}
+
+.projeto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projeto-info {
+    padding: 20px;
+}
+
+.projeto-info h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.projeto-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.projeto-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.projeto-info ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.projeto-info a {
+    display: inline-block;
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.projeto-info a:hover {
+    background-color: #e68900;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.servicos {
+    padding: 80px 40px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.servicos h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff9800;
+    text-align: center;
+}
+
+.servicos p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.servico-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.servico-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.servico-card:hover {
+    transform: translateY(-10px);
+}
+
+.servico-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.servico-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.servico-card .btn {
+    display: inline-block;
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.servico-card .btn:hover {
+    background-color: #e68900;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contato {
+    padding: 80px 40px;
+    background-color: #fff;
+    color: #333;
+}
+
+.contato h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff9800;
+    text-align: center;
+}
+
+.contato p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff9800;
+    outline: none;
+}
+
+.btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e68900;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ff9800;
+}

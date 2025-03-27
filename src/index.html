@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Perfeito</title>
+    <link rel="stylesheet" href="./css/syles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Meu Site</div>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#cta" class="btn">Comece Agora</a></li>
+            </ul>
+        </nav>
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Olá, eu sou Douglas</h1>
+            <p>
+                Sou um Desenvolvedor Front-End apaixonado por criar interfaces modernas e funcionais. Trabalho com HTML, CSS, JavaScript e React, buscando sempre inovar na experiência do usuário e no design dos meus projetos. 
+                Tenho experiência em diversas tecnologias e ferramentas, e sou sempre movido por desafios que me fazem crescer e aprimorar minhas habilidades.
+            </p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-cv">Ver Currículo</a>
+                <a href="#contato" class="btn-contact">Entrar em Contato</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram" width="30px">
+                </a>
+                <a href="https://www.github.com" target="_blank">
+                    <img src="github-icon.png" alt="GitHub" width="30px">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="linkedin-icon.png" alt="LinkedIn" width="30px">
+                </a>
+            </div>
+        </div>
+        <div class="hero-image"></div>
+    </section>
+        <section id="sobre" class="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>
+                Olá, meu nome é Douglas, sou apaixonado por tecnologia e desenvolvimento de software. Atualmente, estou cursando **Análise e Desenvolvimento de Sistemas** na <strong>Universidade Cruzeiro do Sul</strong>, onde estou adquirindo conhecimentos fundamentais sobre programação, arquitetura de sistemas e desenvolvimento de soluções tecnológicas inovadoras.
+            </p>
+            <p>
+                Além disso, tenho uma formação em **Engenharia de Software**. Durante esse curso, aprendi sobre metodologias de desenvolvimento ágil, análise de requisitos e design de sistemas, o que me permitiu aprimorar minha visão sobre como construir aplicações escaláveis e de alta qualidade.
+            </p>
+            <p>
+                Minha jornada no desenvolvimento front-end começou com uma **formação em Front-End pela Dio.me**, onde adquiri habilidades em HTML, CSS, JavaScript, React, e ferramentas de design, como Figma e Adobe XD. Essa formação me ajudou a entender as melhores práticas para criar interfaces incríveis e funcionais.
+            </p>
+            <h3>Cursos Importantes</h3>
+            <ul>
+                <li>**Lógica de Programação** - Certificado em Lógica de Programação para resolver problemas de forma eficiente.</li>
+                <li>**Desenvolvimento Web com React** - Curso focado na criação de interfaces dinâmicas utilizando a biblioteca React.</li>
+                <li>**JavaScript para Web** - Aperfeiçoei minhas habilidades em JavaScript para criar aplicações interativas e responsivas.</li>
+                <li>**CSS Avançado** - Curso para aprimorar o uso de CSS em projetos, incluindo Flexbox, Grid e animações.</li>
+                <li>**Design de Interfaces** - Aprendi a projetar layouts que proporcionam uma experiência de usuário única e intuitiva.</li>
+            </ul>
+            <p>
+                Estou constantemente me atualizando com novas tecnologias e frameworks, sempre em busca de oferecer soluções de alta qualidade para os projetos em que trabalho.
+            </p>
+        </div>
+    </section>
+    <section id="projetos" class="projetos">
+        <div class="container">
+            <h2>Meus Projetos</h2>
+            <p>Confira abaixo alguns dos meus projetos de desenvolvimento, onde utilizei tecnologias como JavaScript, React, HTML, CSS e outras ferramentas importantes para criar soluções inovadoras e funcionais.</p>
+            
+            <div class="projeto-lista">
+                <!-- Projeto 1 -->
+                <div class="projeto-card">
+                    <img src="projeto1.jpg" alt="Projeto 1">
+                    <div class="projeto-info">
+                        <h3>Projeto To-Do List</h3>
+                        <p>Aplicação de lista de tarefas interativa, desenvolvida com React, onde os usuários podem adicionar, editar e excluir tarefas.</p>
+                        <ul>
+                            <li>React</li>
+                            <li>JavaScript</li>
+                            <li>CSS</li>
+                        </ul>
+                        <a href="https://github.com/douglas/to-do-list" target="_blank" class="btn">Ver no GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="projeto-card">
+                    <img src="projeto2.jpg" alt="Projeto 2">
+                    <div class="projeto-info">
+                        <h3>Site Soberano</h3>
+                        <p>Criação de um site para um restaurante de feijoada, com um design responsivo, utilizando HTML, CSS e JavaScript.</p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <a href="https://github.com/douglas/soberano" target="_blank" class="btn">Ver no GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="projeto-card">
+                    <img src="projeto3.jpg" alt="Projeto 3">
+                    <div class="projeto-info">
+                        <h3>Cafeteria Café da Manhã</h3>
+                        <p>Site de uma cafeteria, com cardápio e design moderno, desenvolvido com HTML, CSS, JavaScript e animações.</p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                        </ul>
+                        <a href="https://github.com/douglas/cafe-da-manha" target="_blank" class="btn">Ver no GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Projeto 4 -->
+                <div class="projeto-card">
+                    <img src="projeto4.jpg" alt="Projeto 4">
+                    <div class="projeto-info">
+                        <h3>Mr. Donut</h3>
+                        <p>Criação de um site de vendas de donuts, com uma interface limpa e interativa, utilizando HTML, CSS e JavaScript.</p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <a href="https://github.com/douglas/mr-donut" target="_blank" class="btn">Ver no GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2>Meus Serviços</h2>
+            <p>Ofereço uma variedade de serviços de desenvolvimento para ajudar você a alcançar seus objetivos online, com soluções eficientes e de alta qualidade.</p>
+            
+            <div class="servico-lista">
+                <!-- Serviço 1: Landing Pages -->
+                <div class="servico-card">
+                    <h3>Landing Pages</h3>
+                    <p>Criação de landing pages profissionais para promover seu produto ou serviço de maneira eficaz, com design responsivo e otimizado para conversão.</p>
+                    <p><strong>Valor:</strong> R$ 1.200,00</p>
+                    <a href="#contato" class="btn">Tenho Interesse</a>
+                </div>
+
+                <!-- Serviço 2: Landing Pages Animadas -->
+                <div class="servico-card">
+                    <h3>Landing Pages Animadas</h3>
+                    <p>Desenvolvimento de landing pages com animações interativas e transições suaves, oferecendo uma experiência única ao usuário.</p>
+                    <p><strong>Valor:</strong> R$ 1.800,00</p>
+                    <a href="#contato" class="btn">Tenho Interesse</a>
+                </div>
+
+                <!-- Serviço 3: Sites Estáticos -->
+                <div class="servico-card">
+                    <h3>Sites Estáticos</h3>
+                    <p>Criação de sites estáticos rápidos e funcionais, com design atraente, perfeito para empresas e projetos pessoais.</p>
+                    <p><strong>Valor:</strong> R$ 2.000,00</p>
+                    <a href="#contato" class="btn">Tenho Interesse</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Estou sempre disponível para conversar sobre novos projetos, oportunidades ou dúvidas. Entre em contato e vamos conversar!</p>
+            
+            <form action="#" method="POST" class="form-contato">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
+                <div class="social-media">
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
