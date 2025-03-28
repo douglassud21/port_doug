@@ -1,3 +1,16 @@
+
+:root {
+    --background-color: #121212;
+    --primary-color: #1e1e1e;
+    --secondary-color: #242424;
+    --text-color: #ffffff;
+    --accent-color: #00bcd4;
+    --hover-color: #008ba3;
+    --border-color: #333;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +19,7 @@
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
 }
 
 .header {
@@ -14,10 +27,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-color);
     position: fixed;
     width: 100%;
+    z-index: 1000;
     top: 0;
     left: 0;
     transition: 0.3s;
@@ -41,7 +55,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     font-size: 18px;
     padding: 10px 15px;
     /* Aumenta a área de clique */
@@ -57,13 +71,13 @@ body {
     bottom: -5px;
     width: 0;
     height: 3px;
-    background: #ff9800;
+    background: var(--hover-color);
     transition: all 0.3s ease-in-out;
     transform: translateX(-50%);
 }
 
 .nav-links a:hover {
-    color: #ff9800;
+    color: var(--accent-color);
 }
 
 .nav-links a:hover::after {
@@ -71,12 +85,12 @@ body {
 }
 
 .btn {
-    background: transparent;
+    background: var(--accent-color);
     padding: 10px 20px;
-    border: 2px solid #ff9800;
+    border: 2px solid var(--border-color);
     border-radius: 5px;
     font-weight: bold;
-    color: #ff9800;
+    color: var(--text-color);
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease-in-out;
@@ -89,7 +103,7 @@ body {
     left: 50%;
     width: 0;
     height: 0;
-    background: rgba(255, 152, 0, 0.2);
+    background: rgba(0, 238, 255, 0.2);
     transition: all 0.4s ease-in-out;
     border-radius: 50%;
     transform: translate(-50%, -50%);
@@ -101,9 +115,9 @@ body {
 }
 
 .btn:hover {
-    color: white;
-    border-color: #ff9800;
-    background: rgba(255, 152, 0, 0.1);
+    color: var(--text-color);
+    border-color: var(--hover-color);
+    background: var(--hover-color);
 }
 
 .btn:active {
@@ -119,7 +133,7 @@ body {
 .menu-hamburguer div {
     width: 30px;
     height: 3px;
-    background: white;
+    background: var(--text-color);
     margin: 5px;
 }
 
@@ -130,7 +144,7 @@ body {
         top: 80px;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.9);
+        background: var(--background-color);
         padding: 20px 0;
         text-align: center;
     }
@@ -179,19 +193,18 @@ body {
 .hero {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: calc(100vh - 80px);
-    /* Ajusta considerando um header de 80px */
+    justify-content: space-between;
+    height: 100vh;
     padding: 100px 40px;
-    flex-wrap: wrap;
     position: relative;
     margin-top: 80px;
-    /* Garante que o conteúdo não fique atrás do header */
+    color: var(--text-color);
 }
 
 .hero-content {
     width: 60%;
     text-align: left;
+    z-index: 2;
 }
 
 .hero-content h1 {
@@ -215,15 +228,15 @@ body {
     padding: 12px 24px;
     border-radius: 5px;
     font-weight: bold;
-    color: #333;
-    border: 2px solid #ff9800;
+    color: var(--text-color);
+    border: 2px solid var(--accent-color);
     background: transparent;
     transition: 0.3s;
 }
 
 .hero-buttons a:hover {
-    background: #ff9800;
-    color: white;
+    background: var(--accent-color);
+    color: var(--text-color);
 }
 
 .social-icons {
@@ -233,20 +246,25 @@ body {
 }
 
 .social-icons a {
-    color: #333;
+    color: var(--text-color);
     font-size: 24px;
     transition: 0.3s;
 }
 
 .social-icons a:hover {
-    color: #ff9800;
+    color: var(--accent-color);
 }
 
+/* Imagem ocupando toda a lateral direita */
 .hero-image {
-    width: 40%;
-    height: calc(100vh - 80px);
-    background: url('background-image.jpg') no-repeat center center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40vw;
+    height: 100vh;
+    background: url('../img/fundo.jpg') no-repeat center center;
     background-size: cover;
+    z-index: 1;
 }
 
 /* Responsividade */
@@ -255,8 +273,8 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 50px 20px;
         height: auto;
+        padding: 50px 20px;
     }
 
     .hero-content {
@@ -268,6 +286,7 @@ body {
     }
 
     .hero-image {
+        position: relative;
         width: 100%;
         height: 50vh;
     }
@@ -343,18 +362,17 @@ body {
 
 
 
-
 .sobre {
     padding: 80px 5%;
-    background-color: #fff;
-    color: #333;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
 }
 
 .sobre h2 {
     font-size: 2.5rem;
     margin-bottom: 15px;
-    color: #ff9800;
+    color: var(--accent-color);
 }
 
 .sobre p {
@@ -377,7 +395,7 @@ body {
     font-size: 1.125rem;
     margin-bottom: 12px;
     padding: 10px 15px;
-    background: #f5f5f5;
+    background: var(--hover-color);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -386,7 +404,7 @@ body {
 
 .sobre ul li::before {
     content: "✔";
-    color: #ff9800;
+    color: var(--background-color);
     font-size: 1.5rem;
 }
 
@@ -455,7 +473,7 @@ body {
 
 .projetos {
     padding: 80px 40px;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
     color: #333;
     text-align: center;
 }
@@ -463,7 +481,7 @@ body {
 .projetos h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #ff9800;
+    color: var(--accent-color);
     text-align: center;
 }
 
@@ -483,8 +501,8 @@ body {
 }
 
 .projeto-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -507,7 +525,7 @@ body {
 
 .projeto-info h3 {
     font-size: 24px;
-    color: #333;
+    color: var(--accent-color);
     margin-bottom: 15px;
 }
 
@@ -526,13 +544,13 @@ body {
 .projeto-info ul li {
     font-size: 16px;
     margin-bottom: 5px;
-    color: #555;
+    color: var(--text-color);
 }
 
 .projeto-info a {
     display: inline-block;
-    background-color: #ff9800;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--text-color);
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
@@ -542,7 +560,7 @@ body {
 }
 
 .projeto-info a:hover {
-    background-color: #e68900;
+    background-color: var(--hover-color);
 }
 
 @media (max-width: 768px) {
@@ -610,8 +628,8 @@ body {
 
 .servicos {
     padding: 80px 40px;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     /* Centraliza todo o conteúdo */
     display: flex;
@@ -622,7 +640,7 @@ body {
 .servicos h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #ff9800;
+    color: var(--accent-color);
 }
 
 .servicos p {
@@ -642,10 +660,10 @@ body {
 }
 
 .servico-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--primary-color);
+    border: 1px solid var(--background-color);
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--background-color);
     padding: 20px;
     transition: transform 0.3s ease;
     text-align: center;
@@ -658,7 +676,7 @@ body {
 
 .servico-card h3 {
     font-size: 24px;
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 15px;
 }
 
@@ -670,8 +688,8 @@ body {
 
 .servico-card .btn {
     display: inline-block;
-    background-color: #ff9800;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--text-color);
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
@@ -681,7 +699,7 @@ body {
 }
 
 .servico-card .btn:hover {
-    background-color: #e68900;
+    background-color: var(--hover-color);
 }
 
 /* Responsividade */
@@ -753,14 +771,14 @@ body {
 
 .contato {
     padding: 80px 40px;
-    background-color: #fff;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .contato h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #ff9800;
+    color: var(--accent-color);
     text-align: center;
 }
 
@@ -786,7 +804,7 @@ body {
 
 .form-group label {
     font-size: 16px;
-    color: #333;
+    color: var(--accent-color);
     margin-bottom: 8px;
     display: block;
 }
@@ -796,7 +814,7 @@ body {
     width: 100%;
     padding: 12px;
     font-size: 16px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--secondary-color);
     border-radius: 5px;
 }
 
@@ -806,13 +824,13 @@ body {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #ff9800;
+    border-color: var(--background-color);
     outline: none;
 }
 
 .btn {
-    background-color: #ff9800;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--text-color);
     padding: 12px 25px;
     border-radius: 5px;
     font-weight: bold;
@@ -821,7 +839,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #e68900;
+    background-color: var(--hover-color);
 }
 
 
@@ -854,8 +872,8 @@ body {
 
 
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     padding: 40px 0;
     text-align: center;
 }
@@ -877,12 +895,12 @@ body {
 }
 
 .social-media a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
 .social-media a:hover {
-    color: #ff9800;
+    color: var(--hover-color);
 }
