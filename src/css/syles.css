@@ -1,3 +1,4 @@
+/* Root */
 
 :root {
     --background-color: #121212;
@@ -9,18 +10,25 @@
     --border-color: #333;
 }
 
+/* EM BREVE IREI ADICIONAR MAIS TEMAS!!! */
 
+/* Configurações globais */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
+
+/* PRECISO TROCAR AS FONTES AINDA!!! */
+
+/* Body */
 
 body {
     background-color: var(--background-color);
 }
+
+/* Configurações do Header */
 
 .header {
     display: flex;
@@ -165,30 +173,9 @@ body {
         display: flex;
     }
 }
+/* Fim Header */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Hero */
 
 .hero {
     display: flex;
@@ -203,6 +190,7 @@ body {
 
 .hero-content {
     width: 60%;
+    padding: 100px;
     text-align: left;
     z-index: 2;
 }
@@ -210,16 +198,57 @@ body {
 .hero-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    overflow: hidden;
+    /* Esconde o texto enquanto digita */
+    white-space: nowrap;
+    /* Evita quebra de linha */
+    border-right: 3px solid #000;
+    /* Simula um cursor */
+    width: 0;
+    animation: typing 5s steps(40, end) forwards, blink 0.8s infinite;
+    animation-delay: 1s;
 }
 
-.hero-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    line-height: 1.6;
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    60% {
+        width: 100%;
+        /* Pausa antes de apagar */
+    }
+
+    90% {
+        width: 0;
+        /* Apaga lentamente */
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+/* Faz a animação reiniciar infinitamente */
+.hero-content h1 {
+    animation: typing 5s steps(40, end) forwards, blink 0.8s infinite;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 .hero-buttons {
     display: flex;
+    margin-top: 25px;
     gap: 15px;
 }
 
@@ -325,156 +354,115 @@ body {
     }
 }
 
+/* Preciso ajustar a formatação ainda e adicionar animação no h1, também preciso adicionar os icones e melhorar alguns efeitos */
 
+/* Fim da Hero */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Sobre */
 
 .sobre {
-    padding: 80px 5%;
-    background-color: var(--primary-color);
+    padding: 100px 10%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--text-color);
     text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .sobre h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+    font-size: 3rem;
+    margin-bottom: 20px;
     color: var(--accent-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sobre h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .sobre p {
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     line-height: 1.8;
-    margin-bottom: 25px;
-    max-width: 800px;
+    margin-bottom: 30px;
+    max-width: 850px;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0.9;
 }
 
 .sobre ul {
     list-style-type: none;
     padding: 0;
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .sobre ul li {
-    font-size: 1.125rem;
-    margin-bottom: 12px;
-    padding: 10px 15px;
+    font-size: 1.2rem;
+    padding: 15px;
     background: var(--hover-color);
-    border-radius: 8px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .sobre ul li::before {
     content: "✔";
     color: var(--background-color);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.sobre .pu {
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
     .sobre {
-        padding: 60px 8%;
+        padding: 70px 8%;
     }
 
     .sobre h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .sobre p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .sobre ul li {
         font-size: 1rem;
-        padding: 8px 12px;
+        padding: 12px;
     }
 }
 
+/* Preciso organizar melhor o layout e espaçar alguns itens, talvez adiconar imagens e animações */
 
+/* Fim sobre */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Projetos */
 
 .projetos {
     padding: 80px 40px;
     background-color: var(--background-color);
-    color: #333;
+    color: var(--text-color);
     text-align: center;
 }
 
@@ -544,7 +532,7 @@ body {
 .projeto-info ul li {
     font-size: 16px;
     margin-bottom: 5px;
-    color: var(--text-color);
+    color: var(--hover-color);
 }
 
 .projeto-info a {
@@ -575,56 +563,11 @@ body {
     }
 }
 
+/* Preciso ajustar os textos, arrumar as fontes, trocar cores e efeitos, corrigir os nomes dos itens e conteúdo */
 
+/* Fim projetos */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Serviços */
 
 .servicos {
     padding: 80px 40px;
@@ -714,60 +657,11 @@ body {
     }
 }
 
+/* Adicionar aniamações nas caixas e melhorar sua aparência */
 
+/* Fim Serviços */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Contato */
 
 .contato {
     padding: 80px 40px;
@@ -842,34 +736,11 @@ body {
     background-color: var(--hover-color);
 }
 
+/* Adicionar funcionalidade ao formulario, preciso que ele: ( Envie mensagens para o meu email, com o número de telefone whatsapp da pessoa, para que eu entre em contato. ) */
 
+/* Fim contato */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Footer */
 
 .footer {
     background-color: var(--primary-color);
@@ -904,3 +775,91 @@ body {
 .social-media a:hover {
     color: var(--hover-color);
 }
+
+/* Preciso adicionar mais opções ao footer */
+
+/* Fim Footer */
+
+/* 
+    Ideias para adicionar depois: 
+    1 - Adiconar temas
+    2 - Adicionar idioma em Inglês
+    3 - Adicionar Efeitos de Scroll
+    4 - Adicionar Nova barra de Scroll
+    5 - Adicionar Gsap
+    6 - Adicionar Sass e Scss
+    7 - Adicionar React JS
+    8 - Novas ideias em breve!!!
+*/
+
+/* Extras :) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estiliza a barra de rolagem no Chrome, Edge e Safari */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Largura da barra de rolagem */
+    height: 10px;
+    /* Altura da barra de rolagem lateral */
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: var(--border-color);
+    /* Cor do fundo */
+    border-radius: 10px;
+}
+
+/* Cor da alça da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    /* Cor principal */
+    border-radius: 10px;
+    border: 2px solid var(--text-color);
+    /* Borda ao redor da alça */
+}
+
+/* Efeito ao passar o mouse sobre a alça */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover-color);
+    /* Cor alterada ao passar o mouse */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) var(--text-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Obrigado pela visita!!! */
