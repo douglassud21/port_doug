@@ -330,14 +330,15 @@
 
     <!-- Contato -->
     <section id="contato" class="contato">
-
-        <!-- Introduçao contato -->
+        <!-- Introdução contato -->
         <div class="container">
             <h2>Entre em Contato</h2>
             <p>Estou sempre disponível para conversar sobre novos projetos, oportunidades ou dúvidas. Entre em contato e vamos conversar!</p>
             
-            <!-- Formulario -->
-            <form action="#" method="POST" class="form-contato">
+            <!-- Formulário -->
+            <form action="https://formsubmit.co/ajax/douglas.nascimentosud21@gmail.com" method="POST" class="form-contato" id="formContato">
+                <!-- Desativa o CAPTCHA -->
+                <input type="hidden" name="_captcha" value="false">
 
                 <!-- Nome -->
                 <div class="form-group">
@@ -356,6 +357,7 @@
                     <label for="mensagem">Mensagem</label>
                     <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
                 </div>
+
                 <button type="submit" class="btn">Enviar Mensagem</button>
             </form>
         </div>
