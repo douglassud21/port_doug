@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="diari.css">
     <title>Diário</title>
 </head>
 <body>
@@ -78,12 +79,160 @@
 
                             </div>
                     </div>
+                    <hr>
                     <div class="html">
-                        <span>
-                            HTML (estrutura de páginas).
-                        </span>
-                        <p></p>
+                        <div class="estrutura">
+                            <span>
+                                HTML (estrutura de páginas).
+                            </span>
+                            <h3>
+                                O que é HTML?
+                            </h3>
+                            <span>
+                                HTML (HyperText Markup Language) é a linguagem usada para estruturar páginas da web.
+                            </span>
+                            <span>
+                                Ele define os elementos que compõem uma página: textos, imagens, links, listas, formulários, etc.
+                            </span>
+                            <span>
+                                Não é uma linguagem de programação, e sim de marcação.
+                            </span>
+                            <h4>
+                                Todo documento HTML segue um esqueleto fixo:
+                            </h4>
+                            <p>
+                                < ! DOCTYPE html > → informa ao navegador que estamos usando HTML5.
+                            </p>
+                            <p>
+                                < html lang="pt-BR" > → define a linguagem da página (bom para SEO e acessibilidade).
+                            </p>
+                            <p>
+                                < head > → parte de configuração (não aparece na tela).
+                            </p>
+                            <p>
+                                < meta charset="UTF-8" > → permite acentos e caracteres especiais.
+                            </p>
+                            <p>
+                                < meta name="viewport"... > → torna o site responsivo.
+                            </p>
+                            <p>
+                                < title > → título que aparece na aba do navegador.
+                            </p>
+                            <p>
+                                < body > → contém todo o conteúdo visível da página.
+                            </p>
+                        </div>
+                        <div class="htmlBasic">
+                            <h2>
+                                Principais Tags de Estrutura
+                            </h2>
+                            <span>
+                                Títulos
+                            </span>
+                            <p>
+                                Vai do h1 até o h6 
+                            </p>
+                            <span>
+                                Parágrafos
+                            </span>
+                            <p>
+                                < p >Esse é um parágrafo de texto.< /p >
+                            </p>
+                            <span>
+                                Quebra de linha
+                            </span>
+                            <p>
+                                < p >Linha 1< br >Linha 2< /p >
+                            </p>
+                            <span>
+                                Links
+                            </span>
+                            <p>
+                                < a href="https://google.com" target="_blank">Ir para o Google</ a >
+                            </p>
+                            <span>
+                                Imagens
+                            </span>
+                            <p>
+                                < img src="imagem.jpg" alt="Descrição da imagem" width="300" >
+                            </p>
+                            <span>
+                                Listas
+                            </span>
+                            <p>
+                                < ol >
+                                    < li >Primeiro item</ li >
+                                    < li >Segundo item</ li >
+                                </ ol >
+                            </p>
+                            <span>
+                                Não ordenada:
+                            </span>
+                            <p>
+                                < ul >
+                                    < li >Item</ li >
+                                    < li >Outro item</ li >
+                                </ ul >
+                            </p>
+                        </div>
+                        <div class="semantic">
+                            <h2>
+                                Estrutura Semântica (HTML5)
+                            </h2>
+                            <span>
+                                Hoje em dia, usamos tags semânticas para dar significado ao conteúdo:
+                            </span>
+
+
+                            <div class="estruturaCompleta">
+                                <p>< header > < !-- Cabeçalho -- ></p>
+                                <p>< h1 >Logo do Site</ h1 ></p>
+                                <p>< nav ></p>
+                                    <p>< a href="#home">Home</ a ></p>
+                                    <p>< a href="#sobre">Sobre</ a ></p>
+                                <p></ nav ></p>
+                                <p></ header ></p>
+
+                                <p>< main > < !-- Conteúdo principal -- ></p>
+                                <p>< section id="home" ></p>
+                                    <p>< h2 >Bem-vindo</ h2 ></p>
+                                    <p>< p >Texto de introdução.</ p ></p>
+                                <p></ section ></p>
+
+                                <p>< article ></p>
+                                    <p>< h2 >Notícia</ h2 ></p>
+                                    <p>< p >Conteúdo do artigo...</ p ></p>
+                                <p></ article ></p>
+                                <p></ main ></p>
+
+                                <p>< aside > < !-- Conteúdo lateral -- ></p>
+                                <p>< h3 >Links úteis</ h3 ></p>
+                                <p></ aside ></p>
+
+                                <p>< footer > < !-- Rodapé -- ></p>
+                                <p>< p > & copy; 2025 - Meu Site</ p ></p>
+                                <p></ footer ></p>
+                            </div>
+                        
+                            <div class="estruturaOutros">
+                                <span>
+                                    < section id="contato" > <br>
+                                        < h2 >Contato</ h2 > <br>
+                                        < form > <br>
+                                            < label for="nome" >Nome:</ label > <br>
+                                            < input type="text" id="nome" name="nome" > <br>
+
+                                            < label for="email" >Email:</ label > <br>
+                                            < input type="email" id="email" name="email" > <br>
+
+                                            < button type="submit">Enviar </ button > <br>
+                                        </ form > <br>
+                                    </ section > <br>
+                                </span>
+                            </div>
+                        </div>
                     </div>
+                    
                     <div class="css">
                         <span>
                             CSS (estilos, layouts, responsividade).
